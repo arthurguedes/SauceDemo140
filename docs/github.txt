@@ -1,0 +1,8 @@
+Repositório - serviço que armazena com segurança tudo que produzimos -> Cofre 
+Controle de acesso -> dar e remover permissões para convidados 
+controle de versão -> máquina do tempo 
+
+Serve como um portfólio 
+
+www.github.com --> empresa adquirida pela Microsoft 
+

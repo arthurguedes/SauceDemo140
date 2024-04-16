@@ -1,0 +1,4 @@
+3 pontos de fragilidade numa automação de testes 
+    - seletor errado , seletor dinamico 
+    - programação exótica 
+    - sincronismo 
