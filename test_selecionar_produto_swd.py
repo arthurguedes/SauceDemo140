@@ -13,6 +13,7 @@ class Teste_Produtos:
     def setup_method(self,method):                            # método de inicialização dos testes 
         self.driver = webdriver.Chrome()                 # instanciar o objeto do Selenium Webdriver como Chrome 
         self.driver.implicitly_wait(2)                # define o tempo de espera padrão por elementos em 10 segundos 
+        self.driver.maximize_window()
 
     def teardown_method(self,method):                       # finalização dos testes
         self.driver.quit()                           # destroi o objeto do selenium webdriver da memória 
@@ -28,7 +29,27 @@ class Teste_Produtos:
         assert self.driver.find_element(By.ID, "item_4_title_link").text == "Sauce Labs Backpack"
         assert self.driver.find_element(By.CSS_SELECTOR, ".inventory_item:nth-child(N) .inventory_item_price").text == "$29.99"
 
+        #inclusão no carrinho 
+        self.driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack").click()
+        assert self.driver.find_element(By.CLASS_NAME,"shopping_cart_badge").text == "1"
+
+        #verificação do produto no carrinho 
+        self.driver.find_element(By.ID, "shopping_cart_container").click()
+        assert self.driver.find_element(By.CLASS_NAME, "inventory_item_name").text == "Sauce Labs Backpack"
+        assert self.driver.find_element(By.CLASS_NAME, "cart_quantity").text == "1"
+        assert self.driver.find_element(By.CLASS_NAME, "inventory_item_price").text == "$29.99"
+
+        #remoção de produto 
+        self.driver.find_element(By.ID, "remove-sauce-labs-backpack").click()
+
+        #logout 
+        self.driver.find_element(By.ID, "react-burger-menu-btn").click()
+        self.driver.find_element(By.ID, "logout_sidebar_link").click()
+        self.driver.close()
 
 
 
-    
+
+
+
+
