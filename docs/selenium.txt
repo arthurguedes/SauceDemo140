@@ -2,3 +2,30 @@
     - seletor errado , seletor dinamico 
     - programação exótica 
     - sincronismo 
+
+Formas de organização/criação do script de teste
+
+1 - Gravação - capture e playback / record and play 
+2 - Exportação e importação de código fonte (Script Simples) 
+3 - Criar o script simples manualmente 
+4 - Script com Cucumber / Behave - 1 teste = 2 arquivos 
+    (.feature em Gherkin e .py que é o script de automação)
+
+Behave - gerenciador de integração do script em gherkin para o script de 
+        automação - framework / conexão como plugin 
+
+BDD = Behavior Driven Development - Desenvolvimento direcionado por comportamento 
+--> Foco no comportamento esperado do software -> Dito pelo Product Owner 
+
+Critérios de aceitação --> Sintaxe Gherkin
+Dado - Quando - Então 
+cucumber.io 
+
+testcafe studio.io 
+
+
+
+
+
+
+
